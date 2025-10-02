@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="ic_objectaddress_01" width="20px" height="20px" version="1.1" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #315fd3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)  -->
+  <g>
+    <g id="ic_objectaddress_01">
+      <path class="cls-1" d="M10.598,17.905H1.107c-.438,0-.793-.355-.793-.793V2.888c0-.438.355-.793.793-.793h9.491c.438,0,.793.355.793.793v14.237c0,.438-.355.793-.793.793h0v-.012Z"/>
+      <path class="cls-1" d="M19.284,15.515h-1.976v-4.592h-1.586v4.592h-1.976c-.331,0-.521.379-.32.639h0l2.769,3.68c.166.213.473.213.639,0l2.769-3.68c.201-.26,0-.639-.32-.639Z"/>
+      <path class="cls-1" d="M19.604,3.846L16.834.166c-.166-.213-.473-.213-.639,0l-2.769,3.692c-.201.26,0,.639.32.639h1.976v4.592h1.586v-4.592h1.976c.331,0,.521-.379.32-.639v-.012Z"/>
+    </g>
+  </g>
+</svg>

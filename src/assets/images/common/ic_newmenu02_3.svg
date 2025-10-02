@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.14 29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_무제_그라디언트_5);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #bbccf9;
+      }
+
+      .cls-4 {
+        fill: url(#_무제_그라디언트_4);
+      }
+    </style>
+    <linearGradient id="_무제_그라디언트_4" data-name="무제 그라디언트 4" x1="0" y1="11.9" x2="21.14" y2="11.9" gradientUnits="userSpaceOnUse">
+      <stop offset=".1" stop-color="#3948ad"/>
+      <stop offset="1" stop-color="#3b73e0"/>
+    </linearGradient>
+    <linearGradient id="_무제_그라디언트_5" data-name="무제 그라디언트 5" x1="12.86" y1="26.32" x2="17.77" y2="26.32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3948ad"/>
+      <stop offset="1" stop-color="#3b73e0"/>
+    </linearGradient>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)  -->
+  <g>
+    <g id="conts">
+      <g>
+        <path class="cls-4" d="M3.93,0h16.29c.51,0,.92.41.92.92v21.44c0,.51-.41.92-.92.92H3.01c-.64,0-1.24.14-1.73.41-.57.32-1.28-.14-1.28-.8V3.93C0,1.76,1.76,0,3.93,0Z"/>
+        <path class="cls-3" d="M2.98,20.57h17.15c.56,0,1.01.45,1.01,1.01v3.93c0,.56-.45,1.01-1.01,1.01H2.98C1.33,26.52,0,25.19,0,23.54H0C0,21.9,1.33,20.57,2.98,20.57Z"/>
+        <polygon class="cls-1" points="17.77 29 15.32 27.56 12.86 29 12.86 23.64 17.77 23.64 17.77 29"/>
+        <rect class="cls-2" x="4.22" y="4.09" width="14.03" height="2.62" rx="1.31" ry="1.31"/>
+      </g>
+    </g>
+  </g>
+</svg>

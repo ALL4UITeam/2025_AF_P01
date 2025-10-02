@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+// @use '_reset';
+@use './common/reset';
+@use 'common/header.scss';
+@use '_fonts';
+@use '_common';
+@use '_icons';
+@use '_layout';
+// @use '_gnb';
+// @use './contents/main/main.scss';
+@use '_component';
+@use '_map';
+@use '_modal';
+@use '_primevue';
+@use './contents/introduction/introduction.scss';
+
+body {
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    color: #000;
+
+    backface-visibility: hidden;
+    // transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    background-color: #f2f5fa;
+}
+
+
+@mixin caution{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: .25rem;
+    height: .875rem;
+    line-height: 14.32px;
+    font-size: .75rem;
+    letter-spacing: 0;
+    i{
+        width: .75rem;
+        height: .75rem;
+        background-position: center;
+        background-size: .75rem;
+    }
+}
+
+
+/*inputText 우측 아이콘 클릭 */
+.p-input-icon-right{
+    i{
+        cursor: pointer;
+    }
+}
+
+/* utility */
+
+i {
+    display: inline-block;
+    width: var(--body-MS-size);
+    height: var(--body-MS-size);
+    background-position: center;
+    background-size: var(--body-MS-size);
+}
+
+
+/* 로딩바 관련 */
+.p-component-overlay-enter {animation: none !important;}
+.loaderWrap {
+    position: fixed;
+    z-index: 9999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.loader {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    background-color: var(--gray-ccc);
+}
+.loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #23C152;
+    animation: prixClipFix 2s linear infinite ;
+}
+.loader::after{
+    border-color: #157EFB;
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+}
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}

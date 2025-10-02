@@ -1,0 +1,67 @@
+### gitlab CI/CD
+services:
+  - name: 10.46.148.25:5000/docker:dind-insecure
+    command: ["--insecure-registry=10.46.148.25:5000"]
+variables:
+  #내부 넥서스 도커레지스트리
+  DOCKER_REGISTRY: 10.46.148.25:5000
+  #태그명 ex)juso-frontend-dev
+  TAG_NAME: "juso-frontend-$CI_COMMIT_BRANCH"
+  TAG_LATEST: "$TAG_NAME:latest"
+
+stages:
+#  - test
+  - build
+  - notify
+  
+buildNdeploy:
+  stage: build
+  image: 10.46.148.25:5000/nodejs:18.20.0
+  services:
+    - name: 10.46.148.25:5000/docker:latest
+      entrypoint: ["dockerd-entrypoint.sh"]
+      command: ["--insecure-registry", "10.46.148.25:5000"]
+  script:
+    - echo "build with profile $PROFILE"
+    - npm ci
+    - npm run build_$PROFILE
+    - rm -Rf /mnt/daip_shared/cloud/deploy/JUSO/frontend/*
+#    - cp -r node_modules /mnt/daip_shared/cloud/deploy/JUSO/frontend
+    - cp -r dist/* /mnt/daip_shared/cloud/deploy/JUSO/frontend
+  only:
+    - /^build-([0-9]{4})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])(2[0-3]|[01][0-9])([0-5][0-9])([0-5][0-9])$/
+    - triggers
+    - web
+    - schedules
+
+
+notifySuccess:
+  stage: notify
+  allow_failure: true
+  image: 10.46.148.25:5000/alpine:curl
+  variables:
+    CI_PROJECT_NAME: $CI_PROJECT_NAME
+    PROFILE: $PROFILE
+  script: |
+    curl -X POST -H 'Content-Type: application/json' --data "{\"text\":\"${CI_PROJECT_NAME} ${PROFILE} 배포가 완료되었습니다.\"}" "https://chat.local/hooks/6687794bcd5f563a832981d1/o7pCN3qAi3NH5yRvcLGsokJ4t6EvDfEPZuEPecXLPmNP3CuZ"
+  only:
+    - /^build-([0-9]{4})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])(2[0-3]|[01][0-9])([0-5][0-9])([0-5][0-9])$/
+    - triggers
+    - web
+    - schedules
+
+notifyFailed:
+  stage: notify
+  allow_failure: true
+  image: 10.46.148.25:5000/alpine:curl
+  when: on_failure
+  variables:
+    CI_PROJECT_NAME: $CI_PROJECT_NAME
+    PROFILE: $PROFILE
+  script: |
+    curl -X POST -H 'Content-Type: application/json' --data "{\"text\":\"${CI_PROJECT_NAME} ${PROFILE} 배포가 실패하였습니다.\"}" "https://chat.local/hooks/6687794bcd5f563a832981d1/o7pCN3qAi3NH5yRvcLGsokJ4t6EvDfEPZuEPecXLPmNP3CuZ"
+  only:
+    - /^build-([0-9]{4})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])(2[0-3]|[01][0-9])([0-5][0-9])([0-5][0-9])$/
+    - triggers
+    - web
+    - schedules

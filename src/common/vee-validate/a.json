@@ -1,0 +1,16 @@
+{
+  "userInfo": {
+    "userId": "admin",
+    "userNm": "관리자",
+    "deptNm": "plaform",
+    "useAt": "Y",
+    "crtrId": "admin",
+    "creatDt": "2023-09-14T06:56:07.000+00:00",
+    "updusrId": "admin",
+    "updtDt": "2023-09-14T06:56:07.000+00:00",
+    "lgvCd": "45110",
+    "lgvReplcCd": "451102",
+    "lctnLgvReplcCd": "451113",
+  },
+  ... 생략
+}

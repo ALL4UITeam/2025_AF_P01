@@ -1,0 +1,307 @@
+@charset "utf-8";
+@use '@/assets/scss/_mixin';
+
+
+.mainSearchBoxBasic {
+    display: flex;
+    gap:30px;
+    margin-top:23px;
+
+    &.searchCurrent {
+        display:none;
+    }
+
+    &__searchAdress {
+        width: 100%;
+        height: 75px;
+        box-shadow: 0 7px 15px 0 rgba(0,0,0,0.03);
+        border:30px;
+        padding-left:87px;
+        border-radius: 37px;
+        background: #fff;
+        color:#666;
+        font-size:22px;
+        text-align: left;
+    }
+
+    &__quickMenu {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 320px;
+        padding-right:54px;
+        border-radius: 37px;
+        background:#000 url('@images/main/ic-find-map@2x.png') no-repeat 44px 17px / 59px 42px;
+        color:#fff;
+        font-size:22px;
+        font-weight: 22px;
+        &.mobileType {
+            display:none;
+        }
+        &.fixed {
+            position: fixed;
+            right: 100px;
+            bottom:100px;
+            min-width: auto;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background-position: 50%;
+            .mainSearchBoxBasic__quickText {display:none;}
+        }
+
+        &:focus,
+        &:hover {
+            transform: scale(0.8);
+            transition: transform 1s;
+        }
+    }
+}
+
+@include mixin.breakpoint-tablet {
+    .mainSearchBox {
+        display: flex;
+        gap:30px;
+        margin-top:23px;
+    
+        &__searchAdress {
+            width: 100%;
+            height: 50px;
+            box-shadow: 0 7px 15px 0 rgba(0,0,0,0.03);
+            border:30px;
+            padding-left:87px;
+            border-radius: 37px;
+            background: #fff;
+            color:#666;
+            font-size:13px;
+            text-align: left;
+        }
+    }
+}
+
+
+.mainSearchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    height: 80px;
+    margin:0 auto;
+    border-radius: 30px;
+    border:1px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box,border-box;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to top, #2b6ae5 0%, #5a5de8 100%);
+
+    .p-inputtext {
+        width: 100%;
+        height: 100%;
+        padding:0 0 0 29px;
+        border-radius: 0;
+        background: transparent;
+        border:none;
+        box-sizing: border-box;
+        color:#000;
+        font-size:17px;
+
+        &::placeholder {
+            color:#666;
+        }
+    }
+
+    &__recentSearchesButtonMore {
+        height: 100%;
+        padding:0 19px 0 10px;
+
+        i {
+            width: auto;
+            height: auto;
+            color:#777;
+            font-size:13px;
+            font-weight: bold;
+            margin:1px 0 0 1px;
+        }
+    }
+
+    
+
+    .recentSearches {
+        display: none;
+        position: absolute;
+        top:80px;
+        left:0;
+        right:0;
+        border-top:1px solid #e1e4e8;
+        background: #fff;
+        border-radius: 0 0 15px 15px;
+        z-index: 110;
+
+        &__box {
+            padding:0 10px 20px;
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            height: 47px;
+            padding-left:18px;
+            color:#325ee6;
+            font-size:15px;
+        }
+
+        &__list {
+            li {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding-left:18px;
+            border-radius: 10px;
+
+            &:hover {
+                background: #f5f7f9;
+            }
+            }
+        }
+
+        &__searchText {
+            overflow: hidden;
+            position: relative;
+            font-size:16px;
+            color:#000;
+            text-overflow: ellipsis;
+        }
+
+        &__text {
+            overflow:unset;
+            flex:1;
+            text-align: left;
+
+            &:hover,
+            &:focus {
+            .recentSearches__searchText {
+                position: relative;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom:-4px;
+                    left:0;
+                    right:0;
+                    height: 1px;
+                    background: #000;
+                }
+            }
+            }
+        }
+
+        &__function {
+            display: flex;
+            justify-content: space-between;
+            height: 52px;
+            border-top:1px solid #e1e4e8;
+        }
+
+        &__button {
+            height: 100%;
+            padding:0 13px;
+            color:#666;
+            font-size:15px;
+        }
+
+        &__recentSearchesfunction {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 52px;
+            border-top:1px solid #e1e4e8;
+        }
+        &__recentSearchesfunctionButton {
+            height: 52px;
+            padding:0 20px;
+            color:#666;
+            font-size:15px;
+
+            & + button {
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top:17px;
+                    left:0;
+                    width: 1px;
+                    height: 16px;
+                    background: #ddd;
+                }
+            }
+        }
+
+    }
+
+    &.current {
+    border:none;
+    border-radius: 15px 15px 0 0;
+    background: #fff;
+
+        .recentSearches {
+        display: block;
+        box-shadow: 2.4px 6.6px 13px 0 rgba(0,0,0,0.05);
+        }
+
+        .bi-caret-down-fill {
+        transform: rotate(180deg);
+        }
+    }
+
+}
+
+.mainResult {
+    position: relative;
+    width: 960px;
+    margin:24px auto 0;
+    justify-content: flex-start;
+
+    .resultLayerPopup__functionList {
+        &:last-child {
+            position: absolute;
+            right:0;
+        }
+    }
+}
+
+.clearButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    margin-left:10px;
+    background: #e1e4ea;
+    color:#333;
+
+    i {
+    width: auto;
+    height: auto;
+    font-size:17px;
+    font-weight: bold;
+    margin:1px 0 0 1px;
+    }
+}
+.searchButton {
+    position: relative;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    margin:0 24px 0 14px;
+
+    i {
+    width: auto;
+    height: auto;
+    position: absolute;
+    inset:0;
+    color:#2b6ae5;
+    font-size: 21px;
+    }
+}

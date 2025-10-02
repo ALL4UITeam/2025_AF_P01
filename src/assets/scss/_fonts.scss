@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/**
+ * 폰트 & 아이콘
+ * 이 파일은 all.scss에서 import되어 사용됩니다.
+ **/
+
+/* pretendard */
+
+:root{
+	--font-thin: 100;
+	--font-extralight: 200;
+	--font-light: 300;
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-semibold: 600;
+	--font-bold: 700;
+	--font-extrabold: 800;
+	--font-black: 900;
+
+    /* fontSize */
+    --h1-size: 1.5rem; /* 24px */
+    --h2-size: 1.3rem; /* 20px */
+    --sub-title-size: 1.125rem;  /* 18px */
+    --body-L-size: 1rem; /* 16px */
+    --body-M-size: 0.875rem; /* 14px */
+    --body-MS-size: 0.8125rem; /* 13px */
+    --body-S-size: 0.75rem; /* 12px */
+    --comment-size: 0.75rem; /* 12px */
+    --etc-size: 0.6875rem; /* 11px */
+
+}
+

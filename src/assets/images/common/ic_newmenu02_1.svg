@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.4 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #bbccf9;
+      }
+
+      .cls-3 {
+        fill: url(#_무제_그라디언트_2);
+      }
+
+      .cls-4 {
+        fill: #7a9ded;
+      }
+    </style>
+    <linearGradient id="_무제_그라디언트_2" data-name="무제 그라디언트 2" x1="8.23" y1="10.86" x2="25.18" y2="10.86" gradientUnits="userSpaceOnUse">
+      <stop offset=".16" stop-color="#3948ad"/>
+      <stop offset="1" stop-color="#3b73e0"/>
+    </linearGradient>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)  -->
+  <g>
+    <g id="conts">
+      <g>
+        <g>
+          <g>
+            <polygon class="cls-2" points="8.35 25.82 0 28 4.03 15.58 9.92 14.05 8.35 25.82"/>
+            <polygon class="cls-4" points="8.35 25.82 16.7 28 16.7 16.24 9.92 14.05 8.35 25.82"/>
+          </g>
+          <g>
+            <polygon class="cls-4" points="25.06 25.82 33.4 28 29.37 15.58 23.48 14.05 25.06 25.82"/>
+            <polygon class="cls-2" points="25.06 25.82 16.7 28 16.7 16.24 23.48 14.05 25.06 25.82"/>
+          </g>
+        </g>
+        <g>
+          <path class="cls-3" d="M24.59,11.59h0c.38-.96.59-2.02.59-3.12,0-4.68-3.79-8.48-8.48-8.48s-8.48,3.79-8.48,8.48c0,1.1.21,2.15.59,3.12h0s.02.06.04.08c.09.22.18.43.29.63,2.17,4.41,7.56,9.42,7.56,9.42,0,0,5.39-5,7.56-9.42.1-.21.2-.42.29-.63.01-.03.02-.06.04-.08Z"/>
+          <circle class="cls-1" cx="16.7" cy="8.48" r="3.31"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

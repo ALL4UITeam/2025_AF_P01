@@ -1,0 +1,8 @@
+{
+  "code": "ko",
+  "message": {
+    "_default": "{field} 항목의 값이 유효하지 않습니다.",
+    "confirmed": "{field} 항목의 값이 일치하지 않습니다.",
+    "email": "{field} 항목의 값은 유효한 이메일 형식이어야 합니다"
+  }
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="conts" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.961 29">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: url(#_무제_그라디언트_2);
+      }
+
+      .st2 {
+        fill: #a6bded;
+      }
+
+      .st3 {
+        fill: url(#_무제_그라디언트_3);
+      }
+    </style>
+    <linearGradient id="_무제_그라디언트_2" data-name="무제 그라디언트 2" x1="13.593" y1="15.612" x2="26.961" y2="15.612" gradientUnits="userSpaceOnUse">
+      <stop offset=".137" stop-color="#3948ad"/>
+      <stop offset="1" stop-color="#3b73e0"/>
+    </linearGradient>
+    <linearGradient id="_무제_그라디언트_3" data-name="무제 그라디언트 3" x1="0" y1="14.5" x2="12.332" y2="14.5" gradientUnits="userSpaceOnUse">
+      <stop offset=".281" stop-color="#3948ad"/>
+      <stop offset=".803" stop-color="#3b73e0"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path class="st2" d="M8.046,8.289v-3.826c0-2.461,2.003-4.463,4.463-4.463h9.989c2.461,0,4.463,2.002,4.463,4.463v16.842l-4.199,4.199h-14.716V8.289Z"/>
+    <path class="st1" d="M23.264,2.225c-.423,0-.858.074-1.287.233l-5.964,2.202c-1.454.537-2.42,1.923-2.42,3.473v20.867l13.369-4.936V5.93c0-2.119-1.736-3.705-3.698-3.705Z"/>
+    <path class="st3" d="M12.116,14.974l-5.584,4.863c-.407.355-1.042.065-1.042-.474v-1.659c0-.347-.282-.629-.629-.629H.629c-.347,0-.629-.282-.629-.629v-3.896c0-.347.282-.629.629-.629h4.231c.347,0,.629-.282.629-.629v-1.656c0-.54.635-.829,1.042-.474l5.584,4.863c.288.251.288.698,0,.949Z"/>
+  </g>
+  <circle class="st0" cx="17.504" cy="16.571" r="1.813"/>
+</svg>

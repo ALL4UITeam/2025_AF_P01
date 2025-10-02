@@ -1,0 +1,566 @@
+@charset "utf-8";
+@use '@/assets/scss/_mixin';
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSansKR-Regular-Hestia.woff') format('woff');
+}
+
+.common {
+    &__box {
+        margin-top:40px;
+        padding:40px 40px 49px;
+        border-radius: 20px;
+        box-shadow: 1px 2.8px 15px 0 rgba(0,0,0,0.05);
+        background-color: #fff;
+
+        &.type01 {
+            margin-top:50px;
+        }
+    }
+}
+@include mixin.breakpoint-tablet {
+    .common {
+        &__box {
+            margin-top:16px;
+            padding:15px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.commonButton {
+    &__text {
+        flex:1;
+        color:#111;
+        font-size: 14px;
+        text-align: left;
+        line-height: 40px;
+        letter-spacing: -0.85px;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        gap:12px;
+        height: 40px;
+        padding:0 26px 0 18px;
+        border-radius: 20px;
+        border:1px solid #c9ced4;
+        background: #fff;
+        color:#111;
+        font-size: 18px;
+        text-align: left;
+        line-height: 40px;
+        letter-spacing: -0.85px;
+        
+
+
+        .pi,
+        .bi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-right:-16px;
+            border-radius: 50%;
+            background: #111;
+            color:#fff;
+
+            &.bi-plus {
+                font-size:20px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #2b6ae5;
+
+            .pi,
+            .bi {
+                background-image: linear-gradient(to top, #2b6ae5, #5a5de8);
+                color:#fff;
+            }
+        }
+    }
+    &__tableButton {
+        display:inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding:0 16px;
+        border:1px solid #ddd;
+        border-radius: 12px;
+        background: #fff;
+        gap:7px;
+        color:#333;
+        font-size:16px;
+
+        i {
+            width: auto;
+            height: auto;
+        }
+
+        &.primary {
+            border:none;
+            background: #edeff3;
+
+            i {
+                color:#555;
+                font-size:20px;
+            }
+        }
+    }
+    &__resultButton {
+        display:inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        padding:0 11px;
+        border-radius: 10px;
+        border:1px solid #f0f0f0;
+        background: #f0f0f0;
+        color:#666;
+        font-size:15px;
+
+        i {
+            width: auto;
+            height: auto;
+            color:#000;
+        }
+
+        &.primary {
+            border:none;
+            background: #edeff3;
+
+            i {
+                color:#555;
+                font-size:20px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #325ee6;
+            background:#fff;
+            color:#000;
+        }
+    }
+}
+@include mixin.breakpoint-tablet {
+    .commonButton {
+        &__text {
+            color:#111;
+            font-size: 12px;
+            line-height: 60px;
+        }
+        &__button {
+            height: 38px;
+            padding:0 16px 0 16px;
+            border-radius: 19px;
+            gap:12px;
+        
+            .bi,
+            .pi {
+                width: 30px;
+                height: 30px;
+                margin-right:-12px;
+            }
+    
+            &:hover,
+            &:focus {
+                border-color: #2b6ae5;
+    
+                .bi,
+                .pi {
+                    background-image: linear-gradient(to top, #2b6ae5, #5a5de8);
+                    color:#fff;
+                }
+            }
+        }
+
+        &__tableButton {
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            padding:4px 8px;
+            border:1px solid #ddd;
+            border-radius: 12px;
+            background: #fff;
+            gap:7px;
+            color:#333;
+            font-size:12px;
+    
+            i {
+                width: auto;
+                height: auto;
+            }
+    
+            &.primary {
+                border:none;
+                background: #edeff3;
+    
+                i {
+                    color:#555;
+                    font-size:14px;
+                }
+            }
+        }
+        &__resultButton {
+            min-width: 40px;
+            height: 24px;
+            padding:0 9px;
+            border-radius: 10px;
+            font-size:11px;
+    
+            i {
+                width: auto;
+                height: auto;
+            }
+    
+            &.primary {
+                border:none;
+                background: #edeff3;
+    
+                i {
+                    color:#555;
+                    font-size:11px;
+                }
+            }
+        }
+    }
+}
+@include mixin.breakpoint-mobile {
+    .commonButton {
+        &__button {
+            min-width:71px;
+            .bi {
+                display: none;
+            }
+        }
+        &__text {
+            line-height: 1.1;
+            text-align: center;
+        }
+    }
+}
+.dialogCloseButton {
+    position: absolute;
+    right:30px;
+    top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #111;
+
+    i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin:1px 0 0 1px;
+        line-height: 36px;
+        font-size:22px
+    }
+}
+@include mixin.breakpoint-tablet {
+    .dialogCloseButton {
+        width: 24px;
+        height: 24px;
+        top:15px;
+        right:15px;
+    
+        i {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin:2px 0 0 1px;
+            line-height: 24px;
+            font-size:18px
+        }
+    }
+}
+
+.commonlink {
+    position: relative;
+    color:#325ee6;
+    font-size:inherit;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:-3px;
+            height: 1px;
+            background: #325ee6;
+        }
+    }
+}
+
+.commonBullet {
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+.commonView {
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__essential {
+        margin-top:12px;
+        color:#666;
+        font-size:16px;
+    }
+    &__tip {
+        margin-top:12px;
+        color:#666;
+        font-size:16px;
+    }
+}
+
+@include mixin.breakpoint-tablet {
+    .commonView {
+        &__header {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        &__tip {
+            margin:9px 0 0 11px;
+            font-size:11px;
+        }
+        &__essential {
+            width: 100%;
+            margin-top:14px;
+            font-size:11px;
+            text-align: right;
+        }
+    }
+    
+}
+.commonEssential, 
+.commonColor01 {
+    color:#325ee6;
+}
+.commonColor02 {
+    color:#de1c2a;
+}
+
+
+.commonDetails {
+    width: 100%;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        padding: 0 0 0 30px;
+        background: #f2f5fa;
+        border-top:1px solid #dde1e7;
+        color:#000;
+        font-size:18px;
+
+        .essential {
+            color:#325ee6;
+        }
+    }
+    &__content {
+        width: calc(100% - 300px);
+        padding:30px 0 30px 30px;
+        border-top:1px solid #dde1e7;
+    }
+
+    &__inner {
+        display: flex;
+
+        &:first-child {
+            .commonDetails__title {border-top:none;border-radius: 15px 15px 0 0;}
+            .commonDetails__content {border-top:none;}
+        }
+
+        &:last-child {
+            .commonDetails__title {border-radius:0 0 15px 15px;}
+        }
+    }
+}
+
+@include mixin.breakpoint-tablet {
+
+    .commonDetails {
+        width: 100%;
+    
+        &__title {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            padding: 0 0 0 16px;
+            border-radius: 10px !important;
+            background: #f2f5fa;
+            border-top:none;
+            color:#000;
+            font-size:13px;
+        }
+        &__content {
+            width: 100%;
+            padding:8px 5px 18px;
+            border-top:none;
+        }
+    
+        &__inner {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
+
+
+
+.commonPc {display:block;}
+.commonMo {display:none;}
+@include mixin.breakpoint-tablet {
+    .commonPc {display:none;}
+    .commonMo {display:block;}
+}
+
+
+.commonLayerPopup {
+    &__button {
+        min-width: 180px;
+        height: 50px;
+        border-radius: 25px;
+        background: #f0f0f0;
+        color:#111;
+        font-size:15px;
+
+        &:hover,
+        &:focus {
+            border:1px solid #325ee6;
+            background: #fff;
+            color:#325ee6;
+        }
+    }
+}
+
+.commonTextarea {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    border:1px solid #c0c4ca;
+    background: #fff;
+}
+
+.commonTextNumberBox {
+    width: 100%;
+    margin-top:9px;
+    color:#333;
+    font-size:16px;
+    text-align: right;
+}
+
+.commonHeader {
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom:20px;
+}
+
+
+
+.commonTable {
+    &__wrap {
+        border-top:1px solid #000;
+        margin-top:48px;
+
+        &.type01 {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top:16px;
+        }
+    }
+    &__detail {
+        width: 100%;
+    
+        th {
+            padding: 28px 10px 28px 20px;
+            font-size:17px;
+            border-bottom:1px solid #e5e5e5;
+            background: #f2f5fa;
+            text-align: left;
+        }
+        td {
+            padding:25px 20px;
+            border-bottom:1px solid #e5e5e5;
+            padding:10px;
+            color:#000;
+            font-size:18px;
+        }
+    }
+    &__vertical {
+        width: 100%;
+        thead {
+            th {
+                height: 50px;
+                border-bottom:1px solid #d9dce0;
+                background: #f2f5fa;
+                color:#666;
+                font-size:14px;
+                text-align: center;
+            }
+        }
+        tbody {
+            td {
+                height: 50px;
+                border-bottom:1px solid #e5e5e5;
+                color:#000;
+                font-size:15px;
+                text-align: center;
+            }
+        }
+    }
+    &__tip {
+        margin-top:19px;
+        color:#333;
+        font-size:16px;
+    }
+}
+
+@include mixin.breakpoint-tablet {
+
+    .commonTable {
+        &__wrap {
+            margin-top:20px;
+        }
+        &__detail {
+        
+            th {
+                padding: 14px 5px 14px 10px;
+                height: auto;
+                font-size:12px;
+            }
+            td {
+                height: auto;
+                padding:10px;
+                font-size:12px;
+            }
+        }
+        &__tip {
+            margin-top:12px;
+            color:#333;
+            font-size:12px;
+        }
+    }
+}
+
+
+
